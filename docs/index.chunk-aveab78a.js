@@ -1,0 +1,2 @@
+import{I as B,J as h,S as g}from"./index.chunk-101yd6ng.js";import{Ga as w,Ja as A}from"./index.chunk-e6ntnmb0.js";var F=(b)=>{return(I)=>g(B,{fallback:!0,children:g(b,{...I},void 0,!1,void 0,this)},void 0,!1,void 0,this)},G=(b)=>(q)=>q[b],K=F(h(()=>import("./pages/Home.chunk-da139ez2.js").then(G("HomePage")))),M=F(h(()=>import("./components/app/DocumentCard.chunk-5w5gcwh8.js").then(G("DocumentCard"))));
+export{K as a,M as b};
