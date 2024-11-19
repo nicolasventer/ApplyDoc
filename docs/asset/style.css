@@ -1,1 +1,12 @@
-/* empty style */
+:root {
+	::-webkit-scrollbar {
+		display: block;
+		width: 5px;
+		height: 5px;
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: #4f4f4f;
+		border-right: none;
+		border-left: none;
+	}
+}
