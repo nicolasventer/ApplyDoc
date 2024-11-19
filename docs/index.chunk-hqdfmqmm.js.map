@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "sources": ["..\\src\\pages\\exports_.tsx"],
+  "sourcesContent": [
+    "import { lazy, Suspense } from \"react\";\r\nimport type { DocumentCard as _DocumentCard } from \"../components/app/DocumentCard\";\r\nimport type { HomePage as _HomePage } from \"./Home\";\r\n\r\ntype Params<T> = T extends (...args: [infer U]) => any ? U : Record<string, never>;\r\n\r\nconst Suspender = <T extends (...args: any) => any>(Comp: T) => {\r\n\tconst Suspended = (props: Params<T>) => (\r\n\t\t<Suspense fallback>\r\n\t\t\t<Comp {...props} />\r\n\t\t</Suspense>\r\n\t);\r\n\treturn Suspended;\r\n};\r\n\r\nconst defaultLoader =\r\n\t<T extends Record<string, any>>(defaultExport: keyof T) =>\r\n\t(mod: T) =>\r\n\t\tmod[defaultExport];\r\n\r\n// Pages\r\n\r\n/** Lazy export of {@link _HomePage | HomePage} */\r\nexport const HomePage = Suspender(lazy(() => import(\"./Home\").then(defaultLoader(\"HomePage\"))));\r\n\r\n// Components\r\n\r\n/** Lazy export of {@link _DocumentCard | DocumentCard} */\r\nexport const DocumentCard: typeof _DocumentCard = Suspender(\r\n\tlazy(() => import(\"../components/app/DocumentCard\").then(defaultLoader(\"DocumentCard\")))\r\n);\r\n"
+  ],
+  "mappings": "mHAMA,IAAM,EAAY,CAAkC,IAAY,CAM/D,MALkB,CAAC,IAClB,EAEE,EAFF,CAAU,SAAQ,GAAlB,SACC,EAAC,EAAD,IAAU,GAAV,qBAAiB,GADlB,qBAEE,GAKE,EACL,CAAgC,IAChC,CAAC,IACA,EAAI,GAKO,EAAW,EAAU,EAAK,IAAa,yCAAU,KAAK,EAAc,UAAU,CAAC,CAAC,CAAC,EAKjF,EAAqC,EACjD,EAAK,IAAa,0DAAkC,KAAK,EAAc,cAAc,CAAC,CAAC,CACxF",
+  "debugId": "C418228877703C5364756E2164756E21",
+  "names": []
+}
